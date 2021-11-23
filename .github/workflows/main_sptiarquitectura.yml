@@ -27,7 +27,7 @@ jobs:
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
-          name: SPTIArquitectura
+          name: java-app
           path: '${{ github.workspace }}/target/*.war'
 
   deploy:
@@ -49,5 +49,5 @@ jobs:
         with:
           app-name: 'SPTIArquitectura'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7E904209F2354517BD6B64A9F2E60932 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5AAED391BB324E4C92927CDEC6078C4A }}
           package: '*.war'
